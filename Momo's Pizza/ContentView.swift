@@ -8,10 +8,33 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
     var body: some View {
-        Text("Hello, World!")
-    }
+        NavigationView {
+            
+        VStack {
+            GeometryReader { geo in
+            Image("Asset1")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: geo.size.width)
+
+                
+            
+        }
+            NavigationLink(destination: LoginScreen()) {Text("Slice it, eat it!")
+                .font(.largeTitle)
+                .foregroundColor(.yellow)
+            }
+                }
+    
+            }
+    
+}
+
+
 }
 
 struct ContentView_Previews: PreviewProvider {
