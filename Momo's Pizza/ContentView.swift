@@ -33,26 +33,40 @@ struct ContentView: View {
         
         
         VStack {
-            
+
             List(results, id: \.trackId) { item in
                 VStack(alignment: .leading) {
                     Text(item.trackName)
                         .font(.headline)
                     Text(item.collectionName)
+                    
                 }
+                
             }
             .onAppear(perform: loadData)
-        
+           
+            
+            
             VStack {
+        
                 GeometryReader { geo in
-                          Image("Asset1")
-                              .resizable()
-                              .aspectRatio(contentMode: .fill)
-                              .frame(width: geo.size.width)
-                               
-                    
-                    
+                          Image("Asset7")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.all)
+                            .frame(width: 1080, height: 1920, alignment: .trailing)
+//                            .frame(width: geo.size.width)
+                            
+//                                                        .aspectRatio(contentMode: .fill)
+//                              .resizable()
+//                              .aspectRatio(contentMode: .fill)
+//                              .frame(width: geo.size.width)
+
+
+
                       }
+              
+        
                 
                 
                 VStack(alignment: .leading, spacing: 20) {
@@ -69,20 +83,26 @@ struct ContentView: View {
                     
                  Button("Sign In") {}
                     .padding(.all)
-                    .background(Color.red)
+                    .font(.title)
+                    .colorInvert().accentColor(.black)
+                    
+                    
 //                    Spacer()
                     
                 }
                 Button(action: {
                     LoginManager().logIn(permissions: ["public_profile", "email"], from: UIHostingController(rootView: self)) { (result, error) in
                         
-                        
+                        self.loadData()
                         
                         //Do stuff here
                     }
-                    self.loadData()
+                    
                 }) {
                     Text("Continue with Facebook")
+                    .bold()
+                    .font(.title)
+                    .colorInvert().accentColor(.yellow)
 //                    
                    
                 }

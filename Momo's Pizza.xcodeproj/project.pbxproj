@@ -15,6 +15,7 @@
 		FA5FE41424CCBFB4006D6454 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5FE41324CCBFB4006D6454 /* ContentView.swift */; };
 		FA8E39BE24CCCDB100C190F0 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = FA8E39BD24CCCDB100C190F0 /* FacebookLogin */; };
 		FA8E39C024CCCDB100C190F0 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = FA8E39BF24CCCDB100C190F0 /* FacebookCore */; };
+		FAF3FAE824CED098005D208D /* itemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF3FAE724CED098005D208D /* itemDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FA5FE40B24CCBF6A006D6454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5FE40D24CCBF6A006D6454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA5FE41324CCBFB4006D6454 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAF3FAE724CED098005D208D /* itemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FA5FE3FF24CCBF69006D6454 /* AppDelegate.swift */,
 				FA5FE40124CCBF69006D6454 /* SceneDelegate.swift */,
 				FA5FE41324CCBFB4006D6454 /* ContentView.swift */,
+				FAF3FAE724CED098005D208D /* itemDetail.swift */,
 				FA5FE40524CCBF6A006D6454 /* Assets.xcassets */,
 				FA5FE40A24CCBF6A006D6454 /* LaunchScreen.storyboard */,
 				FA5FE40D24CCBF6A006D6454 /* Info.plist */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5FE40024CCBF69006D6454 /* AppDelegate.swift in Sources */,
+				FAF3FAE824CED098005D208D /* itemDetail.swift in Sources */,
 				FA5FE41424CCBFB4006D6454 /* ContentView.swift in Sources */,
 				FA5FE40224CCBF69006D6454 /* SceneDelegate.swift in Sources */,
 			);
