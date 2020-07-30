@@ -1,84 +1,77 @@
-//
-//  itemDetail.swift
-//  Momo's Pizza
-//
-//  Created by Momo on 7/27/20.
-//  Copyright © 2020 Momo. All rights reserved.
-//
 
 import SwiftUI
-
-struct itemDetail: View {
-    var body: some View {
-        ZStack {
-            VStack{
-                Spacer()
-                
-            }
-                Image("Asset2")
-            .frame(width: 300, height: 220)
-            .background(Image("Asset4"))
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 280, height: 210, alignment: .center)
-        .cornerRadius(20)
-        .shadow(radius: 20)
-            Spacer()
-        
-        
-         VStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text ("Pizza")
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                    .position(.init(x: 230, y: 330))
-
-
-                }
-                Spacer()
-                Image("Asset")
-
-            }
-            .padding(.horizontal, 20)
-            .padding(.top, 20)
-            Spacer()
-            Image("Asset3")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-                .frame(width: 280, height: 210, alignment: .center)
-            .cornerRadius(20)
-            .shadow(radius: 20)
-            .position(.init(x: 210, y: 330))
-//            .background(Image("Asset4"))
-//            .aspectRatio(contentMode: .fit)
-//                .frame(width: 280, height: 210, alignment: .center)
-//            .cornerRadius(20)
-//            .shadow(radius: 20)
-            
-        }
-//            .padding(.horizontal, 0)
-//            .padding(.top, -200)
-            Spacer()
-            Image("Asset5")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 280, height: 210, alignment: .center)
-            .cornerRadius(20)
-            .shadow(radius: 20)
-            .frame(width: 330, height: 200, alignment: .center )
-            .background(Image("Asset2"))
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 290, height: 250)
-            .cornerRadius(20)
-            .shadow(radius: 20)
-    }
+struct ImageModel: Identifiable {
+let id: Int
+let imageView: String
+}
+struct ImageView: View {
+let postImages: ImageModel
+var body: some View {
+    ZStack {
+         
        
+       
+            
+    
+    VStack(alignment: .center) {
+
+        Spacer()
+     
+Image(postImages.imageView)
+
+    .resizable()
+    .aspectRatio(contentMode: .fill)
+    .frame(width: 280, height: 210, alignment: .center)
+    .cornerRadius(20)
+    
+//    .shadow(radius: 20)
+//    .frame(width: 330, height: 200, alignment: .center )
+//    .position(postImages)
+//    .frame(width: 330, height: 200, alignment: .center )
+
+                   
+  }
+   
+ 
+
+    
+    }
+     
+    }
 }
 
-struct itemDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        itemDetail()
+ 
+struct itemDetail: View {
+let images: [ImageModel] = [
+.init(id: 0, imageView: "Asset2"),
+.init(id: 1, imageView: "Asset3"),
+.init(id: 2, imageView: "Asset7"),
+.init(id: 3, imageView: "Asset5"),
+.init(id: 4, imageView: "Asset6"),
+]
+var body: some View {
+NavigationView {
+    ScrollView(.horizontal, showsIndicators: false) {
+HStack {
+ForEach(images, id: \.id) { post in
+   
+ForEach(0..<1) { _ in
+ImageView(postImages: post)
+       }
+    }
+        }
+Spacer()
+}.navigationBarTitle("Choose your Pizza")
+.padding()
+      }
+    
+    
+   }
+ 
+
+struct ContentView_Previews: PreviewProvider {
+static var previews: some View {
+itemDetail()
     }
 }
 }
