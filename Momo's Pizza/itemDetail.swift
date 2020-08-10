@@ -5,13 +5,18 @@ let id: Int
 let imageView: String
 }
 struct ImageView: View {
+
 let postImages: ImageModel
+    
 var body: some View {
-    ZStack {
-         
+    
+//    HStack {
+//        if Image("Asset2") == selection {
+//            Text("ok")
+//        }
+//
        
-       
-            
+    
     
     VStack(alignment: .center) {
 
@@ -38,7 +43,7 @@ Image(postImages.imageView)
     }
      
     }
-}
+
 
  
 struct itemDetail: View {
@@ -47,7 +52,7 @@ let images: [ImageModel] = [
 .init(id: 1, imageView: "Asset3"),
 .init(id: 2, imageView: "Asset7"),
 .init(id: 3, imageView: "Asset5"),
-.init(id: 4, imageView: "Asset6"),
+.init(id: 4, imageView: "Asset9"),
 ]
 var body: some View {
 NavigationView {

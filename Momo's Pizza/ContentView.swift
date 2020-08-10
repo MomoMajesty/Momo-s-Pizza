@@ -53,7 +53,7 @@ import FBSDKLoginKit
                         
                        
                             VStack {
-                                NavigationLink(destination: itemDetail()) {
+                                NavigationLink(destination: itemOrder()) {
                             
                             Text("Sign in")
                             .padding(.all)
